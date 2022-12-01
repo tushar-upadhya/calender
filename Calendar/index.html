@@ -1,55 +1,43 @@
 <!DOCTYPE html>
-<html lang="en">
-    <head>
-        <meta charset="UTF-8" />
-        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <title>Calendar</title>
-        <link rel="stylesheet" href="style.css" />
-    </head>
-    <body>
-        <div id="container">
-            <div id="header">
-                <div id="monthDisplay"></div>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Calsi</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <link rel='stylesheet' type='text/css' media='screen' href='Calsi.css'>
+    
+</head>
+<body onload="renderDate()">
+    <div class="wrapper">
+        <div class="calender">
+            <div class="month">
+                <div class="pre" onclick="moveDate('pre')">
+                    <span>&#10094</span>
+                </div>
                 <div>
-                    <button id="backButton">Back</button>
-                    <button id="nextButton">Next</button>
+                    <h2 id="month">June</h2>
+                    <p id="date_str"></p>
+                </div>
+                <div class="next" onclick="moveDate('next')">
+                    <span>&#10095</span>
                 </div>
             </div>
-
-            <div id="weekdays">
-                <div>Sunday</div>
-                <div>Monday</div>
-                <div>Tuesday</div>
-                <div>Wednesday</div>
-                <div>Thursday</div>
-                <div>Friday</div>
-                <div>Saturday</div>
+            <div class="weekend">
+                <div>Sun</div>
+                <div>Mon</div>
+                <div>Tue</div>
+                <div>Wed</div>
+                <div>Thur</div>
+                <div>Fri</div>
+                <div>Sat</div>
             </div>
-
-            <div id="calendar"></div>
+            <div class="days">
+                
+            </div>
         </div>
-
-        <div id="newEventModal">
-            <h2>New Event</h2>
-
-            <input id="eventTitleInput" placeholder="Event Title" />
-
-            <button id="saveButton">Save</button>
-            <button id="cancelButton">Cancel</button>
         </div>
-
-        <div id="deleteEventModal">
-            <h2>Event</h2>
-
-            <p id="eventText"></p>
-
-            <button id="deleteButton">Delete</button>
-            <button id="closeButton">Close</button>
-        </div>
-
-        <div id="modalBackDrop"></div>
-
-        <script src="/js.js"></script>
-    </body>
+        <script src='Calsi.js'></script>
+</body>
 </html>
